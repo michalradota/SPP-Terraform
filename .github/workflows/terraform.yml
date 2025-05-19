@@ -21,6 +21,12 @@ jobs:
       with:
         terraform_version: 1.12.0
 
+    - name: Check AWS environment variables
+      run: |
+        echo "AWS_ACCESS_KEY_ID is set: ${AWS_ACCESS_KEY_ID:+yes}"
+        echo "AWS_SECRET_ACCESS_KEY is set: ${AWS_SECRET_ACCESS_KEY:+yes}"
+        echo "AWS_SESSION_TOKEN is set: ${AWS_SESSION_TOKEN:+yes}"
+
     - name: Terraform Init
       run: terraform init -input=false
       env:
