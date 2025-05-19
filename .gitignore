@@ -1,7 +1,6 @@
 .terraform/
 terraform.tfstate
 terraform.tfstate.backup
-*.log
 awscliv2.zip
 *.zip
 *.exe
