@@ -33,10 +33,10 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 terraform {
   backend "s3" {
-    bucket         = "twoj-unikalny-bucket-terraform-2025"  # <- wpisz tutaj swoją nazwę bucketu
-    key            = "terraform.tfstate"                     # klucz pliku stanu w bucketcie
-    region         = "us-east-1"
-    use_lockfile   = true                    # tabela do blokady stanu
-    encrypt        = true                                    # szyfrowanie pliku stanu
+    bucket       = "twoj-unikalny-bucket-terraform-2025" # <- wpisz tutaj swoją nazwę bucketu
+    key          = "terraform.tfstate"                   # klucz pliku stanu w bucketcie
+    region       = "us-east-1"
+    use_lockfile = true # tabela do blokady stanu
+    encrypt      = true # szyfrowanie pliku stanu
   }
 }

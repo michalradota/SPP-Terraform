@@ -1,7 +1,7 @@
 provider "aws" {
-  region                  = "us-east-1"
+  region                   = "us-east-1"
   shared_credentials_files = ["~/.aws/credentials"]
-  profile                 = "default"
+  profile                  = "default"
 }
 
 provider "archive" {}
@@ -50,9 +50,9 @@ resource "aws_lambda_function" "temperature_sensor" {
 
   environment {
     variables = {
-      SQS_QUEUE_URL   = aws_sqs_queue.temperature_readings.id
-      SNS_TOPIC_ARN   = aws_sns_topic.temperature_alerts.arn
-      DYNAMODB_TABLE  = aws_dynamodb_table.sensor_status.name
+      SQS_QUEUE_URL  = aws_sqs_queue.temperature_readings.id
+      SNS_TOPIC_ARN  = aws_sns_topic.temperature_alerts.arn
+      DYNAMODB_TABLE = aws_dynamodb_table.sensor_status.name
     }
   }
 }
