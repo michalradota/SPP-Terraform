@@ -5,7 +5,7 @@
 jako IaC korzystając z języka terraform.
 
 • +0.5 - Zaimplementować infrastrukturę z backendem stanu terraforma na
-S3 oraz DynamoDB.
+S3 oraz DynamoDB,
 
 • +0.5 - Dodać automatycznym deployment w CI/CD korzystając z GitHuba lub Gitlaba.
 
